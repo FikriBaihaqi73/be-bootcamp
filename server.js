@@ -2,7 +2,8 @@ const express = require("express");
 const db = require("./db.js");
 const app = express();
 const port = process.env.PORT || 3000;
-
+const cors = require("cors");
+app.use(cors());
 app.use(express.json()); // Middleware untuk membaca body JSON
 
 // 1. WELCOME ROUTE
